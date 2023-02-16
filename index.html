@@ -4,16 +4,28 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<script src="./app.js" defer></script>
 	<link rel="stylesheet" href="style.css">
 	<title>Document</title>
 </head>
 <body>
 	<div class="cookie__wrapper">
-		<span>Печенья: 
-			<input id="value" type="text" disabled>
-		</span>
-		<button id="button"> <img class="cookie__button-img" src="./img/cookie.png" width="300px"/> </button>
+		<div class="cookie__column-one">
+			<div class="cookie-clicker">
+				<h2 id="h2">Печенья: 0</h2>
+				<button id="button"> <img class="cookie__button-img" src="./img/cookie.png" width="300px"/> </button>
+			</div>
+			<button id="button-reset">Очистить</button>
+		</div>
+		<div class="cookie__column-two">
+			<span>Бусты:</span>
+			<button class="button-boost" id="button-x2">x2</button>
+			<button class="button-boost" id="button-x4">x4</button>
+			<button class="button-boost" id="button-x6">x6</button>
+		</div>
 	</div>
 </body>
 </html>
