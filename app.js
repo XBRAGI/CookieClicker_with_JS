@@ -5,34 +5,33 @@ let buttonX2 = document.getElementById('button-x2')
 let buttonX4 = document.getElementById('button-x4')
 let buttonX6 = document.getElementById('button-x6')
 let counter = 0
+let bosts = 1
 
 buttonId.addEventListener('click', function() {
-	counter = counter + 1
-	h2Id.textContent = 'Печенья: ' + counter
+	foo()
+})
+
+buttonId.addEventListener('click', function() {
+	counter += bosts;
+	foo()
 })
 
 buttonX2.addEventListener('click', function() {
-	buttonId.addEventListener('click', function() {
-		counter = counter + 1
-		h2Id.textContent = 'Печенья: ' + counter
-	})
+	bosts = 2;
 })
 
 buttonX4.addEventListener('click', function() {
-	buttonId.addEventListener('click', function() {
-		counter = counter + 3
-		h2Id.textContent = 'Печенья: ' + counter
-	})
+	bosts = 4;
 })
 
 buttonX6.addEventListener('click', function() {
-	buttonId.addEventListener('click', function() {
-		counter = counter + 5
-		h2Id.textContent = 'Печенья: ' + counter
-	})
+	bosts = 6;
 })
 
 buttonReset.addEventListener('click', function() {
-	counter = 0
-	h2Id.textContent = 'Печенья: ' + counter
+	counter = 0;
+	bosts = 1;
+	foo();
 })
+
+const foo = ()=>h2Id.textContent = 'Печенья: ' + counter;
